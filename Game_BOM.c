@@ -239,8 +239,6 @@ int myPercabangan()
                 int rnum15 = (rand() % (upperr - lowwerr + 1)) + lowwerr;
 
 
-                printf("1. %d\n", rnum1);
-                printf("2. %d\n", rnum2);
                 if(choice != rnum1 || choice != rnum2 || choice != rnum3 || choice != rnum4||
                     choice != rnum5 || choice != rnum6 || choice != rnum7 || choice != rnum8 || choice != rnum9 ||
                     choice != rnum10 || choice != rnum11 || choice != rnum12 || choice != rnum13 || choice != rnum14 ||
