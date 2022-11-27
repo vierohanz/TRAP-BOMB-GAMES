@@ -121,84 +121,100 @@ int myPercabangan()
             tab;printf("         =======================================\n");
             tab;printf("         |1. Tebak Angka Bom                   |\n");
             tab;printf("         |2. Hanya 3x Kesempatan               |\n");
-            tab;printf("         |3. Pilihan BOMB 1 -> 20               |\n");
-            tab;printf("         |4. Jika Curang BOMB akan meledak               |\n");
+            tab;printf("         |3. Pilihan BOMB 1 -> 20              |\n");
+            tab;printf("         |4. Jika Curang BOMB akan meledak     |\n");
             tab;printf("         =======================================\n");
             puts(" ");
             tab;printf("         __PROGRAM PENJINAKAN BOMB!!!__");
             puts(" ");
             puts(" ");
-            tab;printf("Masukkan sebuah angka rahasianya");
-            puts(" ");
-            tab;printf("*asumsikan bukan Anda yang menentukan angka rahasia itu*\n");
-            tab;printf("Angka Rahasia: ");
-            scanf("%d", &d);
-            puts(" ");
-            system("cls");
-            tab;printf("\n Anda memilki 3x kesempatan untuk menebak angka. HATI-HATI...'JIKA ANDA GAGAL MAKA BOM AKAN MELEDAK!!!'");
-            printf("\n");
-            tab;printf("\n ->Kesempatan pertama :");
-            printf("\n");
-            tab;printf("\n Silahkan masukkan angka pertama: ");
-            scanf("%d", &a);
-
-            if (a == d)
+            while(true)
             {
-                tab;printf("SELAMAT BOM TELAH BERHASIL ANDA JINAKKAN ^^");
-                break;
-            }
-
-            else if (a != d || a >= 20)
-            {
-
-                tab;printf("Maaf, Angka yang anda masukkan salah.HATI-HATI...BOM MASIH DALAM KEADAAN BERBAHAYA !!");
-                tab;printf("\n");
-                tab;printf("\n");
-                tab;printf("\n ->Kesempatan kedua :");
-                tab;printf("\n");
-                tab;printf("\n Silahkan masukkan angka  kedua: ");
-                scanf("%d", &b);
-                if (b==d)
+                tab;printf("Masukkan sebuah angka rahasianya");
+                puts(" ");
+                tab;printf("*asumsikan bukan Anda yang menentukan angka rahasia itu*\n");
+                tab;printf("Angka Rahasia: ");
+                scanf("%d", &d);
+                if(d > 20)
                 {
-                    tab;printf("SELAMAT BOM TELAH BERHASIL ANDA JINAKKAN ^^\n\n");
-                    break;
+                    tab;printf("*ANGKA YANG ANDA MASUKKAN DILARANG\n");
+                    tab;printf("Masukkan sebuah angka rahasianya\n");
+                    puts(" ");
+                    tab;printf("*asumsikan bukan Anda yang menentukan angka rahasia itu*\n");
+                    tab;printf("Angka Rahasia: ");
+                    scanf("%d", &d);
                 }
-                else if (b != d || b >= 20)
+                else if(d <= 20)
                 {
-
-                    tab;printf("Maaf, Angka yang anda masukkan salah.HATI-HATI...BOM MASIH DALAM KEADAAN BERBAHAYA !!");
-                    tab;printf("\n");
-                    tab;printf("\n");
-                    tab;printf("\n ->Kesempatan ketiga(TERAKHIR):..");
+                    puts(" ");
+                    system("cls");
+                    tab;printf("\n Anda memilki 3x kesempatan untuk menebak angka. HATI-HATI...'JIKA ANDA GAGAL MAKA BOM AKAN MELEDAK!!!'");
                     printf("\n");
-                    tab;printf("\n Silahkan masukkan angka terakhir: ");
-                    scanf("%d", &c);
+                    tab;printf("\n ->Kesempatan pertama :");
+                    printf("\n");
+                    tab;printf("\n Silahkan masukkan angka pertama: ");
+                    scanf("%d", &a);
 
-                    if (c == d)
+                    if (a == d)
                     {
-                        tab;printf("SELAMAT BOM TELAH BERHASIL ANDA JINAKKAN ^^");
+                        tab;printf("SELAMAT BOM TELAH BERHASIL ANDA JINAKKAN ^^\n");
                         break;
                     }
-                    else if (c != d || c >= 20)
+
+                    else if (a != d || a >= 20)
                     {
-                        system("color c");
-                        tab;printf("Maaf, Angka yang anda masukkan salah.AWASSSSS BOM AKAN MELEDAK !!");
-                        printf("\n");
-                        f=0;
-                        for (e=1;e<=500;e++)
+
+                        tab;printf("Maaf, Angka yang anda masukkan salah.HATI-HATI...BOM MASIH DALAM KEADAAN BERBAHAYA !!");
+                        tab;printf("\n");
+                        tab;printf("\n");
+                        tab;printf("\n ->Kesempatan kedua :");
+                        tab;printf("\n");
+                        tab;printf("\n Silahkan masukkan angka  kedua: ");
+                        scanf("%d", &b);
+                        if (b == d)
                         {
-                            f=f+1;
-                            printf("#*&^%()$*");
+                            tab;printf("SELAMAT BOM TELAH BERHASIL ANDA JINAKKAN ^^\n\n");
+                            break;
                         }
-                            printf("DDDUUAARRR !!! BOM MELEDAK !!!");
-                        break;
-                    }
-                }
-            }
+                        else if (b != d || b >= 20)
+                        {
 
+                            tab;printf("Maaf, Angka yang anda masukkan salah.HATI-HATI...BOM MASIH DALAM KEADAAN BERBAHAYA !!");
+                            tab;printf("\n");
+                            tab;printf("\n");
+                            tab;printf("\n ->Kesempatan ketiga(TERAKHIR):..");
+                            printf("\n");
+                            tab;printf("\n Silahkan masukkan angka terakhir: ");
+                            scanf("%d", &c);
+
+                            if (c == d)
+                            {
+                                tab;printf("SELAMAT BOM TELAH BERHASIL ANDA JINAKKAN ^^\n");
+                                break;
+                            }
+                            else if (c != d || c >= 20)
+                            {
+                                system("color c");
+                                tab;printf("Maaf, Angka yang anda masukkan salah.AWASSSSS BOM AKAN MELEDAK !!");
+                                printf("\n");
+                                f=0;
+                                for (e=1;e<=500;e++)
+                                {
+                                    f=f+1;
+                                    printf("#*&^%()$*");
+                                }
+                                    printf("DDDUUAARRR !!! BOM MELEDAK !!!");
+                                    break;
+                            }
+                        }
+                    }
+
+                }
+
+            }
         }
 
-        else if(inputUser == 2)
+        if(inputUser == 2)
         {
             struct listvariable hp[20];
             int choice, y, i, rnum;
@@ -313,23 +329,29 @@ int myPercabangan()
                     if(point >= 80)
                     {
                         tab;printf("CONGRATSS YOU ARE GOT %d POINT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n",point);
+                        break;
                     }
                     else if(point >= 60)
                     {
                         tab;printf("NICE TRY AND KEEP SPIRIT BABY YOU GOT %d POINT!!!!!!!\n", point);
+                        break;
                     }
                     else
                     {
                         tab;printf("HEII YOOO WHY ARE YOU SO FUCKING STUPID!!!!!!!!!\n");
+                        break;
                     }
-                    break;
                 }
             }
-            break;
+            system("pause");
+            system("cls");
         }
-        else
+        else if(inputUser == 0)
         {
-            tab;printf("SAMPAI JUMPA LAGI");
+            puts(" ");
+            puts(" ");
+
+            tab;printf("\t      <<__ SAMPAI JUMPA LAGI __>>");
             break;
         }
     }
@@ -344,4 +366,7 @@ int main()
 
     return 0;
 }
+
+
+
 
