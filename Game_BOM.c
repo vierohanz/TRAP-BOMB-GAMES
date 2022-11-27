@@ -104,17 +104,16 @@ int myPercabangan()
         tab;printf("=============-----------------------------=============\n");
         tab;printf("\t\t     BOMB TRAP\n");
         tab;printf("=============-----------------------------=============\n");
-        tab;printf("| 1. Versus             |\n");
-        tab;printf("| 2. Single Game        |\n");
-        tab;printf("| 0. Exit               |\n");
-        tab;printf("|_____________---------------------------______________\n");
+        tab;printf("| 1. Versus             |                             |\n");
+        tab;printf("| 2. Single Game        |                             |\n");
+        tab;printf("| 0. Exit               |                             |\n");
+        tab;printf("|_____________---------------------------_____________|\n");
         tab;printf("\t\t     MENU : ");
         scanf("%d", &inputUser);
 
         if (inputUser == 1)
         {
             int a,b,c,d,e,f;
-
             system("cls");
             tab;printf("         =======================================\n");
             tab;printf("         |   \tPERATURAN PERMAINAN           |\n");
@@ -137,6 +136,7 @@ int myPercabangan()
                 scanf("%d", &d);
                 if(d > 20)
                 {
+                    puts(" ");
                     tab;printf("*ANGKA YANG ANDA MASUKKAN DILARANG\n");
                     tab;printf("Masukkan sebuah angka rahasianya\n");
                     puts(" ");
@@ -212,6 +212,8 @@ int myPercabangan()
                 }
 
             }
+            system("pause");
+            system("cls");
         }
 
         if(inputUser == 2)
@@ -366,6 +368,8 @@ int main()
 
     return 0;
 }
+
+
 
 
 
